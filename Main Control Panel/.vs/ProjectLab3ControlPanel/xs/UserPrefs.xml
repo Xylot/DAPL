@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{407FD69E-6699-4CB7-BC0B-9D1DF27982A3}|Default">
+  <MonoDevelop.Ide.ItemProperties.ProjectLab3ControlPanel PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProjectLab3ControlPanel/Form2.cs">
+    <Files>
+      <File FileName="ProjectLab3ControlPanel/Form1.cs" Line="46" Column="15" />
+      <File FileName="ProjectLab3ControlPanel/Form1.Designer.cs" Line="412" Column="46" />
+      <File FileName="ProjectLab3ControlPanel/Form2.Designer.cs" Line="1" Column="1" />
+      <File FileName="ProjectLab3ControlPanel/Form2.cs" Line="133" Column="101" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

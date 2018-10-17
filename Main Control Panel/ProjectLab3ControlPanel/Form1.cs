@@ -16,9 +16,7 @@ namespace ProjectLab3ControlPanel
     {
 
         int mov, movX, movY;
-        int index;
         List<Panel> panelList = new List<Panel>();
-
 
 
         public Home()
@@ -40,7 +38,18 @@ namespace ProjectLab3ControlPanel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form2().Show();
+            new Form2(2).Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //string vol = textBox1.Text;
+            new Form2(1).Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new Form2(3).Show();
         }
 
         private void ControlPanelHeader_MouseUp(object sender, MouseEventArgs e)

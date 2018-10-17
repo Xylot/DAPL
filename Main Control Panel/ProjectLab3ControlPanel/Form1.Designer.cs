@@ -409,8 +409,9 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(127, 57);
             this.button8.TabIndex = 7;
-            this.button8.Text = "Diode2";
+            this.button8.Text = "General Data";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -422,6 +423,7 @@
             this.button9.TabIndex = 6;
             this.button9.Text = "Diode";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button6
             // 

@@ -1,17 +1,34 @@
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\ProjectLab3ControlPanel.exe.config
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\ProjectLab3ControlPanel.exe
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\ProjectLab3ControlPanel.pdb
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.csprojAssemblyReference.cache
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.Properties.Resources.resources
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.csproj.GenerateResource.cache
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.csproj.CoreCompileInputs.cache
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.exe
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.pdb
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.Home.resources
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\OxyPlot.dll
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\OxyPlot.WindowsForms.dll
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\OxyPlot.pdb
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\OxyPlot.xml
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\OxyPlot.WindowsForms.pdb
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\bin\Debug\OxyPlot.WindowsForms.xml
-C:\Users\Joseph\source\repos\ProjectLab3ControlPanel\ProjectLab3ControlPanel\obj\Debug\ProjectLab3ControlPanel.csproj.CopyComplete
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/ProjectLab3ControlPanel.exe.config
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/ProjectLab3ControlPanel.exe
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/ProjectLab3ControlPanel.pdb
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csprojAssemblyReference.cache
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.Properties.Resources.resources
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csproj.GenerateResource.cache
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csproj.CoreCompileInputs.cache
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.exe
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.pdb
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.Home.resources
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.dll
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.WindowsForms.dll
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.pdb
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.xml
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.WindowsForms.pdb
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.WindowsForms.xml
+C:/Users/Joseph/source/repos/ProjectLab3ControlPanel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csproj.CopyComplete
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/ProjectLab3ControlPanel.exe.config
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/ProjectLab3ControlPanel.exe
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/ProjectLab3ControlPanel.pdb
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.dll
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.WindowsForms.dll
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.pdb
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.xml
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.WindowsForms.pdb
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/bin/Debug/OxyPlot.WindowsForms.xml
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csprojAssemblyReference.cache
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.Home.resources
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.Properties.Resources.resources
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csproj.GenerateResource.cache
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csproj.CoreCompileInputs.cache
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.csproj.CopyComplete
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.exe
+/Users/Joseph/Documents/ProjectLab_3_Group_4/Main Control Panel/ProjectLab3ControlPanel/obj/Debug/ProjectLab3ControlPanel.pdb
