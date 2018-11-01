@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
 using OxyPlot;
 using OxyPlot.Series;
 using OxyPlot.WindowsForms;
@@ -16,6 +18,7 @@ namespace ProjectLab3ControlPanel
 {
     public partial class Form2 : Form
     {
+
         double[] currentList = {0.00002,
 0.00006,
 0.00004,
@@ -62,6 +65,11 @@ namespace ProjectLab3ControlPanel
 1.025,
 1.045,
 1.07};
+
+        public Form2()
+        {
+            this.InitializeComponent();
+        }
 
         public Form2(int choice)
         {
@@ -130,7 +138,7 @@ namespace ProjectLab3ControlPanel
                     double forwardExpression = satCurrent * (Math.Exp((vBE - (j * 0.01)) / thermalVoltage) - 1);
                     double reverseExpression = (satCurrent / alphaR) * (Math.Exp(vBC / thermalVoltage) - 1);
                     double collectorCurrent = forwardExpression - reverseExpression;
-                    scatterSeries.Points.Add(new ScatterPoint("lo",vCB+0.61, collectorCurrent, 1.5, j*200));
+                    scatterSeries.Points.Add(new ScatterPoint(vCB+0.61, collectorCurrent, 1.5, j*200));
 
                 }
             }

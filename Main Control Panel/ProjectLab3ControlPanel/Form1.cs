@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using OxyPlot;
 using OxyPlot.Series;
@@ -18,15 +20,20 @@ namespace ProjectLab3ControlPanel
         int mov, movX, movY;
         List<Panel> panelList = new List<Panel>();
 
+        Form2 form2 = new Form2();
+        Form3 form3 = new Form3();
+
+        
 
         public Home()
         {
             InitializeComponent();
+            form3.Show();
         }
 
         private void Home_Load(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         private void ControlPanelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -36,20 +43,47 @@ namespace ProjectLab3ControlPanel
             movY = e.Y;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button_MOSFET_N_Click(object sender, EventArgs e)
+        {
+            refreshBluetoothStatusForm("n-MOSFET");
+        }
+
+        private void Button_MOSFET_P_Click(object sender, EventArgs e)
+        {
+            refreshBluetoothStatusForm("p-MOSFET");
+        }
+
+        private void Button_BJT_N_Click(object sender, EventArgs e)
         {
             new Form2(2).Show();
+            refreshBluetoothStatusForm("n-BJT");
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void Button_BJT_P_Click(object sender, EventArgs e)
         {
-            //string vol = textBox1.Text;
-            new Form2(1).Show();
+            refreshBluetoothStatusForm("p-BJT");
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void Button_JFET_N_Click(object sender, EventArgs e)
+        {
+            refreshBluetoothStatusForm("n-JFET");
+        }
+
+        private void Button_JFET_P_Click(object sender, EventArgs e)
+        {
+            refreshBluetoothStatusForm("p-JFET");
+        }
+
+        private void Button_Diode_Click(object sender, EventArgs e)
+        {
+            new Form2(1).Show();
+            refreshBluetoothStatusForm("Diode");
+        }
+
+        private void Button_General_Data_Click(object sender, EventArgs e)
         {
             new Form2(3).Show();
+            refreshBluetoothStatusForm("General Data");
         }
 
         private void ControlPanelHeader_MouseUp(object sender, MouseEventArgs e)
@@ -65,6 +99,11 @@ namespace ProjectLab3ControlPanel
             }
         }
 
-
+        private void refreshBluetoothStatusForm(string transistorChoice)
+        {
+            form3.changeTransistorLabel(transistorChoice);
+            form3.Refresh();
+            
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.ControlPanelButton = new System.Windows.Forms.Button();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.LableTitle = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button_Test_Graph = new System.Windows.Forms.Button();
             this.ControlPanelHeader = new System.Windows.Forms.Panel();
             this.HeaderDashboard = new System.Windows.Forms.Label();
             this.PowerSupplyPanel = new System.Windows.Forms.Panel();
@@ -56,14 +56,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CurveTracerPanel = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Button_General_Data = new System.Windows.Forms.Button();
+            this.Button_Diode = new System.Windows.Forms.Button();
+            this.Button_JFET_P = new System.Windows.Forms.Button();
+            this.Button_JFET_N = new System.Windows.Forms.Button();
+            this.Button_BJT_P = new System.Windows.Forms.Button();
+            this.Button_BJT_N = new System.Windows.Forms.Button();
+            this.Button_MOSFET_P = new System.Windows.Forms.Button();
+            this.Button_MOSFET_N = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TabSelectionPanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
@@ -165,17 +165,17 @@
             this.LableTitle.TabIndex = 1;
             this.LableTitle.Text = "Laboratory";
             // 
-            // button1
+            // Button_Test_Graph
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaShell;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(210, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 41);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Test Graph";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Button_Test_Graph.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_Test_Graph.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Test_Graph.Location = new System.Drawing.Point(210, 242);
+            this.Button_Test_Graph.Name = "Button_Test_Graph";
+            this.Button_Test_Graph.Size = new System.Drawing.Size(203, 41);
+            this.Button_Test_Graph.TabIndex = 8;
+            this.Button_Test_Graph.Text = "Test Graph";
+            this.Button_Test_Graph.UseVisualStyleBackColor = false;
+            this.Button_Test_Graph.Click += new System.EventHandler(this.Button_BJT_N_Click);
             // 
             // ControlPanelHeader
             // 
@@ -385,15 +385,15 @@
             // 
             // CurveTracerPanel
             // 
-            this.CurveTracerPanel.Controls.Add(this.button1);
-            this.CurveTracerPanel.Controls.Add(this.button8);
-            this.CurveTracerPanel.Controls.Add(this.button9);
-            this.CurveTracerPanel.Controls.Add(this.button6);
-            this.CurveTracerPanel.Controls.Add(this.button7);
-            this.CurveTracerPanel.Controls.Add(this.button5);
-            this.CurveTracerPanel.Controls.Add(this.button4);
-            this.CurveTracerPanel.Controls.Add(this.button3);
-            this.CurveTracerPanel.Controls.Add(this.button2);
+            this.CurveTracerPanel.Controls.Add(this.Button_Test_Graph);
+            this.CurveTracerPanel.Controls.Add(this.Button_General_Data);
+            this.CurveTracerPanel.Controls.Add(this.Button_Diode);
+            this.CurveTracerPanel.Controls.Add(this.Button_JFET_P);
+            this.CurveTracerPanel.Controls.Add(this.Button_JFET_N);
+            this.CurveTracerPanel.Controls.Add(this.Button_BJT_P);
+            this.CurveTracerPanel.Controls.Add(this.Button_BJT_N);
+            this.CurveTracerPanel.Controls.Add(this.Button_MOSFET_P);
+            this.CurveTracerPanel.Controls.Add(this.Button_MOSFET_N);
             this.CurveTracerPanel.Controls.Add(this.label2);
             this.CurveTracerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.CurveTracerPanel.Location = new System.Drawing.Point(516, 355);
@@ -401,95 +401,101 @@
             this.CurveTracerPanel.Size = new System.Drawing.Size(625, 295);
             this.CurveTracerPanel.TabIndex = 4;
             // 
-            // button8
+            // Button_General_Data
             // 
-            this.button8.BackColor = System.Drawing.Color.SeaShell;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(468, 165);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(127, 57);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "General Data";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.Button_General_Data.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_General_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_General_Data.Location = new System.Drawing.Point(468, 165);
+            this.Button_General_Data.Name = "Button_General_Data";
+            this.Button_General_Data.Size = new System.Drawing.Size(127, 57);
+            this.Button_General_Data.TabIndex = 7;
+            this.Button_General_Data.Text = "General Data";
+            this.Button_General_Data.UseVisualStyleBackColor = false;
+            this.Button_General_Data.Click += new System.EventHandler(this.Button_BJT_N_Click);
             // 
-            // button9
+            // Button_Diode
             // 
-            this.button9.BackColor = System.Drawing.Color.SeaShell;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(468, 67);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(127, 57);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Diode";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.Button_Diode.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_Diode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Diode.Location = new System.Drawing.Point(468, 67);
+            this.Button_Diode.Name = "Button_Diode";
+            this.Button_Diode.Size = new System.Drawing.Size(127, 57);
+            this.Button_Diode.TabIndex = 6;
+            this.Button_Diode.Text = "Diode";
+            this.Button_Diode.UseVisualStyleBackColor = false;
+            this.Button_Diode.Click += new System.EventHandler(this.Button_Diode_Click);
             // 
-            // button6
+            // Button_JFET_P
             // 
-            this.button6.BackColor = System.Drawing.Color.SeaShell;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(318, 165);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 57);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "p-JFET";
-            this.button6.UseVisualStyleBackColor = false;
+            this.Button_JFET_P.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_JFET_P.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_JFET_P.Location = new System.Drawing.Point(318, 165);
+            this.Button_JFET_P.Name = "Button_JFET_P";
+            this.Button_JFET_P.Size = new System.Drawing.Size(127, 57);
+            this.Button_JFET_P.TabIndex = 5;
+            this.Button_JFET_P.Text = "p-JFET";
+            this.Button_JFET_P.UseVisualStyleBackColor = false;
+            this.Button_JFET_P.Click += new System.EventHandler(this.Button_JFET_P_Click);
             // 
-            // button7
+            // Button_JFET_N
             // 
-            this.button7.BackColor = System.Drawing.Color.SeaShell;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(318, 67);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(127, 57);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "n-JFET";
-            this.button7.UseVisualStyleBackColor = false;
+            this.Button_JFET_N.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_JFET_N.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_JFET_N.Location = new System.Drawing.Point(318, 67);
+            this.Button_JFET_N.Name = "Button_JFET_N";
+            this.Button_JFET_N.Size = new System.Drawing.Size(127, 57);
+            this.Button_JFET_N.TabIndex = 4;
+            this.Button_JFET_N.Text = "n-JFET";
+            this.Button_JFET_N.UseVisualStyleBackColor = false;
+            this.Button_JFET_N.Click += new System.EventHandler(this.Button_JFET_N_Click);
             // 
-            // button5
+            // Button_BJT_P
             // 
-            this.button5.BackColor = System.Drawing.Color.SeaShell;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(173, 165);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 57);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "p-BJT";
-            this.button5.UseVisualStyleBackColor = false;
+            this.Button_BJT_P.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_BJT_P.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_BJT_P.Location = new System.Drawing.Point(173, 165);
+            this.Button_BJT_P.Name = "Button_BJT_P";
+            this.Button_BJT_P.Size = new System.Drawing.Size(127, 57);
+            this.Button_BJT_P.TabIndex = 3;
+            this.Button_BJT_P.Text = "p-BJT";
+            this.Button_BJT_P.UseVisualStyleBackColor = false;
+            this.Button_BJT_P.Click += new System.EventHandler(this.Button_BJT_P_Click);
             // 
-            // button4
+            // Button_BJT_N
             // 
-            this.button4.BackColor = System.Drawing.Color.SeaShell;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(173, 67);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 57);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "n-BJT";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Button_BJT_N.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_BJT_N.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_BJT_N.Location = new System.Drawing.Point(173, 67);
+            this.Button_BJT_N.Name = "Button_BJT_N";
+            this.Button_BJT_N.Size = new System.Drawing.Size(127, 57);
+            this.Button_BJT_N.TabIndex = 2;
+            this.Button_BJT_N.Text = "n-BJT";
+            this.Button_BJT_N.UseVisualStyleBackColor = false;
+            this.Button_BJT_N.Click += new System.EventHandler(this.Button_BJT_N_Click);
             // 
-            // button3
+            // Button_MOSFET_P
             // 
-            this.button3.BackColor = System.Drawing.Color.SeaShell;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(28, 165);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 57);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "p-MOSFET";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Button_MOSFET_P.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_MOSFET_P.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_MOSFET_P.Location = new System.Drawing.Point(28, 165);
+            this.Button_MOSFET_P.Name = "Button_MOSFET_P";
+            this.Button_MOSFET_P.Size = new System.Drawing.Size(127, 57);
+            this.Button_MOSFET_P.TabIndex = 3;
+            this.Button_MOSFET_P.Text = "p-MOSFET";
+            this.Button_MOSFET_P.UseVisualStyleBackColor = false;
+            this.Button_MOSFET_P.Click += new System.EventHandler(this.Button_MOSFET_P_Click);
             // 
-            // button2
+            // Button_MOSFET_N
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaShell;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(28, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 57);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "n-MOSFET";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Button_MOSFET_N.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_MOSFET_N.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_MOSFET_N.Location = new System.Drawing.Point(28, 67);
+            this.Button_MOSFET_N.Name = "Button_MOSFET_N";
+            this.Button_MOSFET_N.Size = new System.Drawing.Size(127, 57);
+            this.Button_MOSFET_N.TabIndex = 2;
+            this.Button_MOSFET_N.Text = "n-MOSFET";
+            this.Button_MOSFET_N.UseVisualStyleBackColor = false;
+            this.Button_MOSFET_N.Click += new System.EventHandler(this.Button_MOSFET_N_Click);
             // 
             // label2
             // 
@@ -554,19 +560,19 @@
         private System.Windows.Forms.Button BoostSupplyButton;
         private System.Windows.Forms.Label LableTitle;
         private System.Windows.Forms.Label HeaderDashboard;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Button_Test_Graph;
+        private System.Windows.Forms.Button Button_Diode;
+        private System.Windows.Forms.Button Button_JFET_P;
+        private System.Windows.Forms.Button Button_JFET_N;
+        private System.Windows.Forms.Button Button_BJT_P;
+        private System.Windows.Forms.Button Button_BJT_N;
+        private System.Windows.Forms.Button Button_MOSFET_P;
+        private System.Windows.Forms.Button Button_MOSFET_N;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button Button_General_Data;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
