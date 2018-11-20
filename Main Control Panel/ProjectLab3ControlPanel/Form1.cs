@@ -23,8 +23,6 @@ namespace ProjectLab3ControlPanel
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
 
-        
-
         public Home()
         {
             InitializeComponent();

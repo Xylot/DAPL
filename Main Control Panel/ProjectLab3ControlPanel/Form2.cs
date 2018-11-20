@@ -89,8 +89,9 @@ namespace ProjectLab3ControlPanel
 
         }
 
-        public Form2(double voltage, double current){
-
+        public Form2(double[] voltageData, double[] currentData){
+            this.InitializeComponent();
+            displayData(currentData, voltageData);
         }
 
         private void displayDiodeCurve()
@@ -150,7 +151,7 @@ namespace ProjectLab3ControlPanel
             this.plot1.Model = model;
         }
 
-        private void displayData(double[] current, double[] voltage)
+        private void displayData(double[] voltage, double[] current)
         {
             var model = new PlotModel { Title = "General Data Curve" };
             var scatterSeries = new ScatterSeries { MarkerType = MarkerType.Circle };

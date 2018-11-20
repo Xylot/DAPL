@@ -17,6 +17,8 @@ namespace ProjectLab3ControlPanel
     public partial class Form3 : Form
     {
 
+        Form2 form2 = new Form2();
+
         SerialPort serialPort = new SerialPort();
 
         public Form3()
@@ -37,8 +39,6 @@ namespace ProjectLab3ControlPanel
             InitializeComponent();
             CurrentTransistorLabel.Text = currentTransistor;
         }
-
-        
 
         public void changeTransistorLabel(string currentTransistor)
         {
@@ -68,14 +68,32 @@ namespace ProjectLab3ControlPanel
                 serialPort.WriteLine(messageToSend);
                 Thread.Sleep(500);
 
-                StringBuilder builder = new StringBuilder(100);
+                StringBuilder builder = new StringBuilder(150);
                 while (serialPort.BytesToRead > 0)
                 {
                     builder.Append(Convert.ToChar(serialPort.ReadChar()));
                 }
-                changeReceivedCommunicationText(builder.ToString());
+                string rawOutput = builder.ToString();
+                changeReceivedCommunicationText(rawOutput);
+                CreateIVArrays(rawOutput, "");
                 break;
             }
+        }
+
+        public void CreateIVArrays(string voltageData, string currentData)
+        {
+            String[] voltageStringArray = voltageData.Split(',');
+            voltageStringArray = voltageStringArray.Skip(1).ToArray();
+            Array.Resize(ref voltageStringArray, voltageStringArray.Length - 1);
+            double[] voltageIntArray = Array.ConvertAll(voltageStringArray, double.Parse);
+            double[] currentIntArray = new double[voltageIntArray.Length];
+            for (int i = 0; i < voltageIntArray.Length; i++)
+            {
+                currentIntArray[i] = voltageIntArray[i] / 10;
+            }
+
+            new Form2(voltageIntArray, currentIntArray).Show();
+
         }
     }
 }
