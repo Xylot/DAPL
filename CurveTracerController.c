@@ -19,24 +19,22 @@ unsigned int count;
 unsigned int gateCount;
 
 void main() {
+  WDTCTL = WDTPW + WDTHOLD;
+  setupPorts();
+  setupTimer();
+  setupADC();
 
-      WDTCTL = WDTPW + WDTHOLD;
-      setupPorts();
-      setupTimer();
-      setupADC();
-
-      while(1) {
-          sampleADC();
-          avg_adc = getAverageADCValue();
-      }
-      
+  while(1) {
+      sampleADC();
+      avg_adc = getAverageADCValue();
+  }
 }
 
 void setupADC() {
-    ADC10CTL1 = CONSEQ_2 + INCH_0;
-    ADC10CTL0 = ADC10SHT_2 + MSC + ADC10ON + ADC10IE;
-    ADC10DTC1 = 0x64;
-    ADC10AE0 |= 0x01;
+  ADC10CTL1 = CONSEQ_2 + INCH_0;
+  ADC10CTL0 = ADC10SHT_2 + MSC + ADC10ON + ADC10IE;
+  ADC10DTC1 = 0x64;
+  ADC10AE0 |= 0x01;
 }
 
 void setupTimer() {
@@ -52,31 +50,31 @@ void setupTimer() {
 
 void setupPorts() {
 	P1SEL &= ~BIT1;
-    P1DIR |= BIT1;
-    P1SEL &= ~BIT3;
-    P1DIR |= BIT3;
-    P1SEL &= ~BIT4;
-    P1DIR |= BIT4;
-    P1SEL &= ~BIT5;
-    P1DIR |= BIT5;
+  P1DIR |= BIT1;
+  P1SEL &= ~BIT3;
+  P1DIR |= BIT3;
+  P1SEL &= ~BIT4;
+  P1DIR |= BIT4;
+  P1SEL &= ~BIT5;
+  P1DIR |= BIT5;
 }
 
 void sampleADC() {
-    ADC10CTL0 &= ~ENC;
-    while (ADC10CTL1 & BUSY);
-    ADC10SA = (int)adc;
-    ADC10CTL0 |= ENC + ADC10SC;
-    __bis_SR_register(CPUOFF + GIE);
+  ADC10CTL0 &= ~ENC;
+  while (ADC10CTL1 & BUSY);
+  ADC10SA = (int)adc;
+  ADC10CTL0 |= ENC + ADC10SC;
+  __bis_SR_register(CPUOFF + GIE);
 }
 
 int getAverageADCValue() {
-    int i;
-    int runningTotal = 0;
-    for(i = 0; i < 100; i++) {
-        runningTotal += adc[i];
-    }
-    int runningTotal /= 100
-    return runningTotal;
+  int i;
+  int runningTotal = 0;
+  for(i = 0; i < 100; i++) {
+      runningTotal += adc[i];
+  }
+  int runningTotal /= 100
+  return runningTotal;
 }
 
 

@@ -18,7 +18,6 @@ namespace ProjectLab3ControlPanel
 {
     public partial class Form2 : Form
     {
-
         double[] currentList = {0.00002,
 0.00006,
 0.00004,
@@ -153,16 +152,37 @@ namespace ProjectLab3ControlPanel
 
         private void displayData(double[] voltage, double[] current)
         {
-            var model = new PlotModel { Title = "General Data Curve" };
-            var scatterSeries = new ScatterSeries { MarkerType = MarkerType.Circle };
+            var model = new PlotModel {
+                Title = "General Data Curve",
+                LegendPlacement = LegendPlacement.Outside
+            };
+            model.LegendTitle = "Legend";
+            var colorAxis = new LinearColorAxis {
+                Position = AxisPosition.None,
+                Key = "ColorAxis",
+                Palette = OxyPalettes.Jet(30),
+                Maximum = 100,
+                Minimum = 0
+            };
+            model.Axes.Add(colorAxis);
+            var scatterSeries = new ScatterSeries {
+                Title = "data 1 ",
+                ColorAxisKey = "ColorAxis",
+                MarkerType = MarkerType.Circle
+            };
 
             for (int i = 0; i < current.Length; i++)
             {
-                scatterSeries.Points.Add(new ScatterPoint(voltage[i], current[i], 1.5, 100));
+                scatterSeries.Points.Add(new ScatterPoint(voltage[i], current[i], 1.5, i));
             }
             model.Series.Add(scatterSeries);
-            model.Axes.Add(new LinearAxis { Position = AxisPosition.Right});
+            //model.Axes.Add(new LinearAxis { Position = AxisPosition.Right});
             this.plot1.Model = model;
+        }
+
+        private void appendData(double[] voltage, double[] current)
+        {
+
         }
 
     }

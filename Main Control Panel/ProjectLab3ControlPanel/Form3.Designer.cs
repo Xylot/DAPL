@@ -40,11 +40,12 @@
             // 
             this.BluetoothStatusLabel.AutoSize = true;
             this.BluetoothStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BluetoothStatusLabel.Location = new System.Drawing.Point(49, 9);
+            this.BluetoothStatusLabel.Location = new System.Drawing.Point(21, 9);
             this.BluetoothStatusLabel.Name = "BluetoothStatusLabel";
-            this.BluetoothStatusLabel.Size = new System.Drawing.Size(292, 42);
+            this.BluetoothStatusLabel.Size = new System.Drawing.Size(347, 42);
             this.BluetoothStatusLabel.TabIndex = 0;
-            this.BluetoothStatusLabel.Text = "Bluetooth Status";
+            this.BluetoothStatusLabel.Text = "Bluetooth Controller";
+            this.BluetoothStatusLabel.Click += new System.EventHandler(this.BluetoothStatusLabel_Click);
             // 
             // label1
             // 

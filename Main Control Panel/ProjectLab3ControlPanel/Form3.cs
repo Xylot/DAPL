@@ -11,6 +11,8 @@ using System.Threading;
 using System.Windows.Forms;
 using OxyPlot;
 using OxyPlot.Series;
+using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace ProjectLab3ControlPanel
 {
@@ -68,23 +70,55 @@ namespace ProjectLab3ControlPanel
                 serialPort.WriteLine(messageToSend);
                 Thread.Sleep(500);
 
-                StringBuilder builder = new StringBuilder(150);
+                StringBuilder builder = new StringBuilder(1000);
                 while (serialPort.BytesToRead > 0)
                 {
                     builder.Append(Convert.ToChar(serialPort.ReadChar()));
+                    //builder.Append(serialPort.ReadChar());
                 }
                 string rawOutput = builder.ToString();
+                rawOutput = SanatizeString(rawOutput);
                 changeReceivedCommunicationText(rawOutput);
+                builder.Clear();
                 CreateIVArrays(rawOutput, "");
                 break;
             }
         }
 
+        public String[] SanatizeArray(String[] arr)
+        {
+            Regex digitsOnly = new Regex(@"[^\d]");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = digitsOnly.Replace(arr[i], "");
+                //Debug.WriteLine(arr[i]);
+            }
+            arr = arr.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            arr = arr.Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();
+            return arr;
+        }
+
+        public string SanatizeString(string str)
+        {
+            Regex digitsOnly = new Regex(@"[^\d,]");
+            return digitsOnly.Replace(str, "");
+        }
+
+        public void printArray(String[] strArray)
+        {
+            Debug.Write("{");
+            for (int i = 0; i < strArray.Length; i++)
+            {
+                Debug.Write(strArray[i] + ", ");
+            }
+            Debug.Write("}");
+        }
+
         public void CreateIVArrays(string voltageData, string currentData)
         {
             String[] voltageStringArray = voltageData.Split(',');
-            voltageStringArray = voltageStringArray.Skip(1).ToArray();
-            Array.Resize(ref voltageStringArray, voltageStringArray.Length - 1);
+            voltageStringArray = SanatizeArray(voltageStringArray);
+            printArray(voltageStringArray);
             double[] voltageIntArray = Array.ConvertAll(voltageStringArray, double.Parse);
             double[] currentIntArray = new double[voltageIntArray.Length];
             for (int i = 0; i < voltageIntArray.Length; i++)
@@ -93,6 +127,11 @@ namespace ProjectLab3ControlPanel
             }
 
             new Form2(voltageIntArray, currentIntArray).Show();
+
+        }
+
+        private void BluetoothStatusLabel_Click(object sender, EventArgs e)
+        {
 
         }
     }
