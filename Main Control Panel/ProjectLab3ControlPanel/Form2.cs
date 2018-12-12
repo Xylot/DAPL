@@ -119,8 +119,15 @@ namespace ProjectLab3ControlPanel
 
         private void displayBJTCurve()
         {
-            var model = new PlotModel { Title = "BJT Saturation Curve" };
-            var scatterSeries = new ScatterSeries { MarkerType = MarkerType.Circle };
+            var model = new PlotModel {
+                Title = "BJT Saturation Curve",
+                LegendPlacement = LegendPlacement.Outside,
+               
+        };
+            model.LegendTitle = "Legend";
+            var scatterSeries = new ScatterSeries {
+                MarkerType = MarkerType.Circle,
+            };
 
             double vBE = 0.7;
             double betaR = 0.1;
@@ -144,8 +151,8 @@ namespace ProjectLab3ControlPanel
             }
 
             model.Series.Add(scatterSeries);
-            model.Axes.Add(new LinearAxis { Position = AxisPosition.Right, Minimum = 0, Maximum = 0.2 });
-            model.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -0.7, Maximum = 1 });
+            model.Axes.Add(new LinearAxis { Position = AxisPosition.Right, Minimum = 0, Maximum = 0.2,  Key="lolo" });
+            model.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -0.7, Maximum = 1, Title = "holo" });
 
             this.plot1.Model = model;
         }
@@ -173,11 +180,31 @@ namespace ProjectLab3ControlPanel
 
             for (int i = 0; i < current.Length; i++)
             {
-                scatterSeries.Points.Add(new ScatterPoint(voltage[i], current[i], 1.5, i));
+                scatterSeries.Points.Add(new ScatterPoint(voltage[i], calculateCurrent(current[i]), 1.5, i));
             }
             model.Series.Add(scatterSeries);
             //model.Axes.Add(new LinearAxis { Position = AxisPosition.Right});
             this.plot1.Model = model;
+        }
+
+        private double calculateCurrent(double voltage)
+        {
+            double current = 0;
+            double uc = 200;
+            double wl = 5;
+            double vgs = 4;
+            double vth = .5;
+            double lamda = 0.05;
+            if(voltage < vgs - vth)
+            {
+                current = uc * wl * (((vgs - vth) * voltage - Math.Pow(voltage, 2) / 2));
+            }
+            else if (voltage >= vgs - vth)
+            {
+                current = (uc / 2) * wl * (Math.Pow(vgs - vth, 2) * (1 + lamda * voltage));
+            }
+            
+            return current;
         }
 
         private void appendData(double[] voltage, double[] current)

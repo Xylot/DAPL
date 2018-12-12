@@ -34,7 +34,7 @@ void setupADC() {
   ADC10CTL1 = CONSEQ_2 + INCH_0;
   ADC10CTL0 = ADC10SHT_2 + MSC + ADC10ON + ADC10IE;
   ADC10DTC1 = 0x64;
-  ADC10AE0 |= 0x01;
+  ADC10AE0 |= BIT5;
 }
 
 void setupTimer() {

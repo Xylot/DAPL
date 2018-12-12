@@ -31,8 +31,8 @@ namespace ProjectLab3ControlPanel
 
         public void InitializeSerialConnection()
         {
-            serialPort.BaudRate = 115200;
-            serialPort.PortName = "COM7";
+            serialPort.BaudRate = 9600;
+            serialPort.PortName = "COM10";
             serialPort.Open();
         }
 
@@ -124,6 +124,7 @@ namespace ProjectLab3ControlPanel
             for (int i = 0; i < voltageIntArray.Length; i++)
             {
                 currentIntArray[i] = voltageIntArray[i] / 10;
+                voltageIntArray[i] = 3.3 * (voltageIntArray[i] / 1024);
             }
 
             new Form2(voltageIntArray, currentIntArray).Show();

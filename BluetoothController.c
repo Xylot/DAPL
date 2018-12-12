@@ -8,6 +8,8 @@ void sendConfirmation();
 void sendError();
 void sendPredefinedArray();
 void sendRandArray();
+void setupADC();
+void sampleADC();
 void itoa2(long unsigned int value, char* result, int base);
 void UARTSendArray(unsigned char * TxArray, unsigned char ArrayLength);
 
@@ -41,7 +43,27 @@ void main(void)
   UCA0CTL1 &= ~UCSWRST; // Initialize USCI state machine
   IE2 |= UCA0RXIE; // Enable USCI_A0 RX interrupt
 
+  setupADC();
+  while(1){
+	  sampleADC();
+  }
+  
   __bis_SR_register(LPM0_bits + GIE); // Enter LPM0, interrupts enabled
+}
+
+void setupADC() {
+  ADC10CTL1 = CONSEQ_2 + INCH_0;
+  ADC10CTL0 = ADC10SHT_2 + MSC + ADC10ON + ADC10IE;
+  ADC10DTC1 = 0x64;
+  ADC10AE0 |= 0x01;
+}
+
+void sampleADC() {
+  ADC10CTL0 &= ~ENC;
+  while (ADC10CTL1 & BUSY);
+  ADC10SA = (int)adc;
+  ADC10CTL0 |= ENC + ADC10SC;
+  __bis_SR_register(CPUOFF + GIE);
 }
 
 // Echo back RXed character, confirm TX buffer is ready first
@@ -136,6 +158,12 @@ void itoa2(long unsigned int value, char* result, int base) {
     *ptr-- = *ptr1;
     *ptr1++ = tmp_char;
   }
+}
+
+#pragma vector=ADC10_VECTOR
+__interrupt void ADC10_ISR(void)
+{
+  __bic_SR_register_on_exit(CPUOFF);
 }
 
 void UARTSendArray(unsigned char * TxArray, unsigned char ArrayLength) {
