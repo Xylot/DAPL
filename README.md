@@ -1,2 +1,2 @@
-# ProjectLab_3_Group_4
-Digital and Analog Power Laboratory
+# Digital and Analog Power Laboratory
+TTU project lab 3 project
